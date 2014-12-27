@@ -43,17 +43,71 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat aliquet convallis. Suspendisse a mollis tellus. Praesent sit amet bibendum metus. Vestibulum lacinia fringilla mauris et malesuada. In eget dolor ultricies, suscipit libero at, pulvinar leo. Donec sed augue augue. Aenean ut sem vel mauris facilisis tincidunt vitae eget tellus. Proin purus arcu, sollicitudin non interdum non, vulputate at quam. Phasellus ac malesuada purus. Nunc lacinia risus enim, quis facilisis eros sollicitudin et. 
               </div>
             </div>
-            <div class="landing-panel">
-              lolol
+            <div class="panel">
+              <div class="carousel">
+                <div class="carousel-frame">
+                  <ul>
+                    <li>hello1</li>
+                    <li>hello2</li>
+                    <li>hello3</li>
+                    <li>hello4</li>
+                    <li>hello5</li>
+                  </ul>
+                </div>
+                <div class="next">next</div>
+                <div class="prev">prev</div>
+              </div>
             </div>
           </div>
         </div>
 
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="src/js/plugins.js"></script>
         <script src="src/js/main.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            //carousel set up
+            $(".carousel-frame ul").each(function(){
+              var slides = $(this).children();
+              //set ul width
+              $(this).width("" + (slides.length * 100) + "%");
+              //set slide width
+              slides.each(function(){
+                $(this).width("" + (100 / slides.length) + "%");
+              });
+              //initialize data
+              $(this).data({
+                current_slide: 0,
+                num_children: slides.length
+              });
+            });
 
+            //carousel navigation
+            function update_slide(slide_list){
+              var cur_slide = slide_list.data("current_slide");
+              slide_list.animate({left: "" + (cur_slide * -100) + "%"});
+            }
+
+            $(".carousel").each(function(){
+              var slide_list = $(this).find(".carousel-frame ul");
+
+              $(this).find(".next").click(function(){
+                var num_children = slide_list.data("num_children");
+                if ((slide_list.data("current_slide") + 1) < num_children) {
+                  slide_list.data({current_slide: slide_list.data("current_slide") + 1});
+                  update_slide(slide_list);
+                }
+              });
+
+              $(this).find(".prev").click(function(){
+                var num_children = slide_list.data("num_children");
+                if (slide_list.data("current_slide") > 0) {
+                  slide_list.data({current_slide: slide_list.data("current_slide") - 1});
+                  update_slide(slide_list);
+                }
+              });
+            });
+          });
+        </script>
     </body>
 </html>

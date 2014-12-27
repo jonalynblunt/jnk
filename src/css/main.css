@@ -16,6 +16,7 @@ html, body {
   height: 70px;
   background: white;
   position: fixed;
+  z-index: 9999;
 }
 
 #container #header #header-content {
@@ -87,6 +88,34 @@ html, body {
 .panel {
   background: blue;
   color: white;
-  width: 800px;
+  width: 1000px;
+  margin: 25px auto 25px auto;
+}
+
+/* carousel stuff */
+.carousel {
+  width: 100%;
+}
+
+.carousel .carousel-frame {
   margin: auto;
+  width: 80%;
+  height: 500px;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-frame ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.carousel-frame ul li {
+  float: left;
+  height: 100%;
 }
