@@ -45,6 +45,7 @@
             </div>
             <div class="panel">
               <div class="carousel">
+                <div class="prev">prev</div>
                 <div class="carousel-frame">
                   <ul>
                     <li>hello1</li>
@@ -55,13 +56,14 @@
                   </ul>
                 </div>
                 <div class="next">next</div>
-                <div class="prev">prev</div>
+                <div class="links"><ul></ul></div>
               </div>
             </div>
           </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
         <script src="src/js/plugins.js"></script>
         <script src="src/js/main.js"></script>
         <script type="text/javascript">
@@ -82,7 +84,7 @@
               });
             });
 
-            //carousel navigation
+            //carousel navigation set up
             function update_slide(slide_list){
               var cur_slide = slide_list.data("current_slide");
               slide_list.animate({left: "" + (cur_slide * -100) + "%"});
@@ -90,9 +92,9 @@
 
             $(".carousel").each(function(){
               var slide_list = $(this).find(".carousel-frame ul");
+              var num_children = slide_list.data("num_children");
 
               $(this).find(".next").click(function(){
-                var num_children = slide_list.data("num_children");
                 if ((slide_list.data("current_slide") + 1) < num_children) {
                   slide_list.data({current_slide: slide_list.data("current_slide") + 1});
                   update_slide(slide_list);
@@ -100,11 +102,23 @@
               });
 
               $(this).find(".prev").click(function(){
-                var num_children = slide_list.data("num_children");
                 if (slide_list.data("current_slide") > 0) {
                   slide_list.data({current_slide: slide_list.data("current_slide") - 1});
                   update_slide(slide_list);
                 }
+              });
+
+              var link_list = $(this).find(".links ul");
+              _.each(_.range(num_children), function(i){
+                link_list.append("<li>" + i + "</li>");
+              });
+
+              var link_width = link_list.find("li").width();
+              link_list.width(num_children * link_width);
+
+              link_list.find("li").click(function(){
+                  slide_list.data({ current_slide: Number($(this).text()) });
+                  update_slide(slide_list);
               });
             });
           });
