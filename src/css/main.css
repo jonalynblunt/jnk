@@ -87,7 +87,22 @@ html, body {
 
 .panel {
   width: 1000px;
-  margin: 25px auto 25px auto;
+  margin: 40px auto;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+}
+
+.text-box {
+  border-radius: 25px;
+  box-sizing: border-box;
+  border: 1px solid;
+  padding: 8px;
+}
+
+.title h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 /* carousel stuff */
@@ -160,20 +175,134 @@ html, body {
 }
 
 /* panel-specific */
-/* bridesmaids */
-.bridesmaid-image {
+/* about */
+.about ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  min-height: 300px;
+}
+
+.about .left-capsule,
+.about .right-capsule {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.about div {
+  margin-bottom: 7px;
+}
+
+.about .picture {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.about .title h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.about .subtitle {
+  text-align: center;
+}
+
+.about .logo-frame {
+  height: 77px;
+  background: url("../img/proposal-bg.png") repeat-x;
+  background-position-y: 50%;
+}
+
+.about .logo {
+  height: 100%;
+  width: 98px;
+  margin: auto;
+}
+
+.about .left-capsule .logo {
+  background: url("../img/feathers-keshaun.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.about .right-capsule .logo {
+  background: url("../img/feathers-jona.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.about .jona-picture {
+  background: url("../img/jonalyn.jpg");
+  background-size: 100% 100%;
+}
+
+.about .keshaun-picture {
+  background: url("../img/keshaun.jpg");
+  background-size: 100% 100%;
+}
+
+/* proposal */
+.proposal .video {
+  width: 420px;
+  height: 315px;
+  margin: 20px auto;
+}
+
+.proposal .timeline {
+  width: 100%;
+  min-height: 300px;
+  background: url("../img/proposal-bg.png") repeat-y;
+  background-position-x: 50%;
+}
+
+.proposal .timeline .right-capsule,
+.proposal .timeline .left-capsule {
+
+}
+
+.proposal .timeline .left-capsule {
+  background: url("../img/proposal-textbg-left.png") no-repeat;
+  background-position-y: 50%;
+  background-position-x: 100%;
+  margin-right: 50%;
+}
+
+.proposal .timeline .right-capsule {
+  background: url("../img/proposal-textbg-right.png") no-repeat;
+  background-position-y: 50%;
+  margin-left: 50%;
+}
+
+.proposal .timeline .right-capsule .text-box {
+  border-radius: 25px;
+  box-sizing: border-box;
+  border: 1px solid;
+  padding-left: 10px;
+  margin-left: 50px;
+}
+
+.proposal .timeline .left-capsule .text-box {
+  border-radius: 25px;
+  box-sizing: border-box;
+  border: 1px solid;
+  padding-left: 10px;
+  margin-right: 50px;
+}
+
+/* bridesmaids + groomsmen */
+.bridesmaids .bridesmaid-image,
+.groomsmen .groomsman-image {
   float: left;
   width: 40%;
   height: 100%;
-  border: 1px solid black;
-  box-sizing: border-box;
 }
 
-.bridesmaid-desc {
+.bridesmaids .bridesmaid-desc,
+.groomsmen .groomsman-desc {
   float: right;
   width: 60%;
   height: 100%;
-  border-radius: 25px;
-  box-sizing: border-box;
   padding: 15px;
 }
