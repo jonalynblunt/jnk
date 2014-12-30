@@ -97,6 +97,13 @@ html, body {
   box-sizing: border-box;
   border: 1px solid;
   padding: 8px;
+  box-shadow: 1px 1px 10px black;
+}
+
+.picture-frame {
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 3px 3px 10px black;
 }
 
 .title h1 {
@@ -164,14 +171,20 @@ html, body {
   height: 50px;
   margin: 0 auto 0 auto;
   padding: 10px 0 0 0;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .carousel .links ul li {
   float: left;
   width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid black;
+  text-align: center;
+  padding: 3px;
   cursor: pointer;
   position: relative;
+  box-sizing: border-box;
 }
 
 /* panel-specific */
@@ -257,9 +270,28 @@ html, body {
   background-position-x: 50%;
 }
 
+.proposal .timeline .left-capsule,
 .proposal .timeline .right-capsule,
-.proposal .timeline .left-capsule {
+.proposal .timeline .center-capsule {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
 
+.proposal .timeline .center-capsule {
+  width: 50%;
+  margin: auto;
+  background: white;
+}
+
+.proposal .timeline .center-capsule .text {
+  text-align: center;
+}
+
+.proposal .timeline .center-capsule .image {
+}
+
+.proposal .timeline .center-capsule .image img {
+  width: 100%;
 }
 
 .proposal .timeline .left-capsule {
@@ -276,11 +308,23 @@ html, body {
 }
 
 .proposal .timeline .right-capsule .text-box {
+  background: url("../img/feathers-jona.png") no-repeat;
+  background-position: 2% 5px;
+  background-size: 38.5px;
+}
+
+.proposal .timeline .right-capsule .text-box {
   border-radius: 25px;
   box-sizing: border-box;
   border: 1px solid;
-  padding-left: 10px;
+  padding-left: 60px;
   margin-left: 50px;
+}
+
+.proposal .timeline .left-capsule .text-box {
+  background: url("../img/feathers-keshaun.png") no-repeat;
+  background-position: 98% 5px;
+  background-size: 38.5px;
 }
 
 .proposal .timeline .left-capsule .text-box {
@@ -291,12 +335,57 @@ html, body {
   margin-right: 50px;
 }
 
+/* photos */
+.photos .carousel li {
+  box-sizing: border-box;
+}
+
+.photos .image-frame {
+  width: 90%;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.photos .image img {
+  width: 100%;
+}
+
+/* details */
+.details .capsule {
+  width: 500px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+}
+
+.details .capsule .label {
+  width: 70px;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  background: pink;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 5px black;
+}
+
 /* bridesmaids + groomsmen */
 .bridesmaids .bridesmaid-image,
 .groomsmen .groomsman-image {
   float: left;
   width: 40%;
   height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.bridesmaids .bridesmaid-image img,
+.groomsmen .groomsman-image img {
+  width: 100%;
 }
 
 .bridesmaids .bridesmaid-desc,
@@ -304,5 +393,13 @@ html, body {
   float: right;
   width: 60%;
   height: 100%;
-  padding: 15px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.bridesmaids .bridesmaid-desc .text-box,
+.groomsmen .groomsman-desc .text-box {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
 }
