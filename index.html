@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" href="src/img/favicon.gif"/>
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="src/css/normalize.css">
@@ -20,19 +20,19 @@
           <div id="header">
             <div id="header-content">
               <ul id="nav1">
-                <li>about us</li>
-                <li>the proposal</li>
-                <li>photos</li>
-                <li>details</li>
+                <li><a href="#about">about us</a></li>
+                <li><a href="#proposal">proposal</a></li>
+                <li><a href="#photos">photos</a></li>
+                <li><a href="#details">details</a></li>
               </ul>
               <div id="logo">
                 &nbsp;
               </div>
               <ul id="nav2">
-                <li>bridesmaids</li>
-                <li>groomsmen</li>
-                <li>registry</li>
-                <li>blog</li>
+                <li><a href="#bridesmaids">bridesmaids</a></li>
+                <li><a href="#groomsmen">groomsmen</a></li>
+                <li><a href="#registry">registry</a></li>
+                <li><a href="#blog">blog</a></li>
               </ul>
             </div>
           </div>
@@ -46,6 +46,7 @@
             <div class="panel about">
               <ul>
                 <li class="left-capsule">
+                  <a class="anchor" name="about"></a>
                   <div class="picture keshaun-picture"></div> 
                   <div class="title"><h1>About Keshaun</h1></div>
                   <div class="subtitle">(as told by Jona)</div>
@@ -71,8 +72,9 @@
             </div>
 
             <div class="panel proposal">
+              <a class="anchor" name="proposal"></a>
               <div class="title"> <h1>The Proposal</h1></div>
-              <div class="subtitle">We had decided in July to have our housewarming party in August...</div>
+              <div class="subtitle"><h3>We had decided in July to have our housewarming party in August...</h3></div>
               <div class="timeline">
                 <div class="center-capsule">
                   <div class="text">
@@ -121,6 +123,7 @@
             </div>
 
             <div class="panel photos">
+              <a class="anchor" name="photos"></a>
               <div class="title"><h1>Photos</h1></div>
               <div class="carousel">
                 <div class="prev-frame">
@@ -145,7 +148,8 @@
             </div>
 
             <div class="panel details">
-              <div class="title"><h1>wedding details</h1></div>
+              <a class="anchor" name="details"></a>
+              <div class="title"><h1>Wedding Details</h1></div>
               <div class="subtitle"><h3>who/what/when/where/how</h3></div>
               <div class="capsule">
                 <div class="label">who</div>
@@ -170,7 +174,8 @@
             </div>
 
             <div class="panel bridesmaids">
-              <div class="title"><h1>bridesmaids</h1></div>
+              <a class="anchor" name="bridesmaids"></a>
+              <div class="title"><h1>Bridesmaids</h1></div>
               <div class="carousel">
                 <div class="prev-frame">
                   <div class="prev">&lt;</div>
@@ -178,21 +183,13 @@
                 <div class="carousel-frame">
                   <ul>
                     <li>
-                      <div class="bridesmaid-image">&nbsp;</div>
+                      <div class="bridesmaid-image groomsman1">&nbsp;</div>
                       <div class="bridesmaid-desc">
                         <div class="text-box">
-                          <h3 class="name">bridesmaid name</h3> 
-                          <div class="text">
-                            stuff about the bridesmaid here
+                          <div class="title">
+                            <h3 class="name">bridesmaid name</h3> 
+                            <h5 class="part">maid of honor</h5>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="bridesmaid-image">&nbsp;</div>
-                      <div class="bridesmaid-desc">
-                        <div class="text-box">
-                          <h3 class="name">bridesmaid name</h3> 
                           <div class="text">
                             stuff about the bridesmaid here
                           </div>
@@ -209,7 +206,8 @@
             </div>
 
             <div class="panel groomsmen">
-              <div class="title"><h1>groomsmen</h1></div>
+              <a class="anchor" name="groomsmen"></a>
+              <div class="title"><h1>Groomsmen</h1></div>
               <div class="carousel">
                 <div class="prev-frame">
                   <div class="prev">&lt;</div>
@@ -217,12 +215,13 @@
                 <div class="carousel-frame">
                   <ul>
                     <li>
-                      <div class="groomsman-image">
-                        <img src="src/img/groomsman1.jpg" />
-                      </div>
+                      <div class="groomsman-image groomsman1"></div>
                       <div class="groomsman-desc">
                         <div class="text-box">
-                          <h3 class="name">groomsman name</h3> 
+                          <div class="title">
+                            <h3 class="name">groosman name</h3> 
+                            <h5 class="part">best man</h5>
+                          </div>
                           <div class="text">
                             stuff about the groomsman here
                           </div>
@@ -230,10 +229,13 @@
                       </div>
                     </li>
                     <li>
-                      <div class="groomsman-image">&nbsp;</div>
+                      <div class="groomsman-image groomsman1"></div>
                       <div class="groomsman-desc">
                         <div class="text-box">
-                          <h3 class="name">groomsman name</h3> 
+                          <div class="title">
+                            <h3 class="name">groosman name</h3> 
+                            <h5 class="part">best man</h5>
+                          </div>
                           <div class="text">
                             stuff about the groomsman here
                           </div>
@@ -250,8 +252,9 @@
             </div>
 
             <div class="panel registry">
-              <h1> registry</h1>
-              coming soon!
+              <a class="anchor" name="registry"></a>
+              <div class="title"><h1>Registry</h1></div>
+              <div class="subtitle"><h3>coming soon!</h3></div>
             </div>
 
 

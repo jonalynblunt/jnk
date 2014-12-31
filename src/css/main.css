@@ -28,6 +28,18 @@ html, body {
   font-family: "Proxima Nova";
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -150px;
+  visibility: hidden;
+}
+
 #container {
   height: 100%;
   min-height: 100%;
@@ -87,7 +99,7 @@ html, body {
 }
 
 #container #header ul li:hover {
-
+  text-decoration: underline;
 }
 
 #container #content {
@@ -122,13 +134,13 @@ html, body {
   width: 1000px;
   margin: 40px auto;
   box-sizing: border-box;
-  padding-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 .text-box {
   border-radius: 25px;
   box-sizing: border-box;
-  padding: 8px;
+  padding: 10px;
   box-shadow: 1px 1px 5px grey;
 }
 
@@ -408,12 +420,12 @@ html, body {
   position: absolute;
   right: 0;
   top: 15px;
-  background: pink;
+  background: #f06680;
   color: white;
   text-align: center;
   font-size: 16px;
   text-transform: uppercase;
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 3px grey;
 }
 
 /* bridesmaids + groomsmen */
@@ -445,4 +457,34 @@ html, body {
   height: 100%;
   box-sizing: border-box;
   padding: 20px;
+}
+
+.bridesmaids .title,
+.groomsmen .title {
+  box-sizing: border-box;
+  padding: 25px 0;
+}
+
+.bridesmaids .title .name,
+.groomsmen .title .name {
+  font-family: "Vevey";
+  font-size: 30px;
+  margin: 0;
+  line-height: 1;
+}
+
+.bridesmaids .title .part,
+.groomsmen .title .part {
+  font-size: 20px;
+  margin: 0;
+}
+
+.bridesmaids .bridesmaid-image,
+.groomsmen .groomsman-image {
+  background-size: 90%;
+  background-position: 50% 50%;
+}
+
+.groomsman1 {
+  background: url("../img/groomsman1.jpg") no-repeat;
 }
