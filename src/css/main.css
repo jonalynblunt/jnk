@@ -1,8 +1,31 @@
+/* fonts */
+@font-face {
+    font-family: 'Asterism';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/asterism.otf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Vevey';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/vevey.otf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/proxima-nova.ttf") format('truetype');
+}
+
 html, body {
   min-height: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Proxima Nova";
 }
 
 #container {
@@ -17,6 +40,7 @@ html, body {
   background: white;
   position: fixed;
   z-index: 9999;
+  box-shadow: -3px -3px 10px;
 }
 
 #container #header #header-content {
@@ -28,10 +52,11 @@ html, body {
 
 #container #header #header-content #logo {
   position: fixed;
-  left: 46%;
-  background-image: url("../img/logo-small.png");
-  height: 100px;
-  width: 128px;
+  left: 50%;
+  background: url("../img/scallop-logo.png") no-repeat;
+  height: 147px;
+  margin: 0 0 0 -144.5px;
+  width: 289px;
 }
 
 #container #header ul {
@@ -54,7 +79,15 @@ html, body {
 #container #header ul li {
   float: left;
   height: 100%;
-  padding: 0 25px 0 25px;
+  padding: 0 17px;
+  font-family: "Vevey";
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#container #header ul li:hover {
+
 }
 
 #container #content {
@@ -89,26 +122,31 @@ html, body {
   width: 1000px;
   margin: 40px auto;
   box-sizing: border-box;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .text-box {
   border-radius: 25px;
   box-sizing: border-box;
-  border: 1px solid;
   padding: 8px;
-  box-shadow: 1px 1px 10px black;
+  box-shadow: 1px 1px 5px grey;
 }
 
 .picture-frame {
   box-sizing: border-box;
   padding: 10px;
-  box-shadow: 3px 3px 10px black;
+  box-shadow: 1px 1px 5px;
 }
 
 .title h1 {
   margin: 0;
   padding: 0;
+  text-align: center;
+  font-family: "Asterism";
+  font-size: 60px;
+}
+
+.subtitle {
   text-align: center;
 }
 
@@ -154,9 +192,17 @@ html, body {
 .carousel .prev-frame .prev {
   position: absolute;
   top: 50%;
-  text-align: center;
   width: 100%;
   cursor: pointer;
+  font-size: 50px;
+}
+
+.carousel .prev-frame .prev {
+  text-align: right;
+}
+
+.carousel .prev-frame .next {
+  text-align: left;
 }
 
 .carousel .links {
@@ -201,16 +247,12 @@ html, body {
   width: 50%;
   float: left;
   box-sizing: border-box;
-  padding: 15px;
-}
-
-.about div {
-  margin-bottom: 7px;
+  padding: 50px;
 }
 
 .about .picture {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin: auto;
 }
 
@@ -218,21 +260,24 @@ html, body {
   margin: 0;
   padding: 0;
   text-align: center;
+  font-size: 40px;
 }
 
 .about .subtitle {
   text-align: center;
+  font-size: 14px;
 }
 
 .about .logo-frame {
-  height: 77px;
+  height: 38.5px;
   background: url("../img/proposal-bg.png") repeat-x;
   background-position-y: 50%;
+  margin-bottom: 7px;
 }
 
 .about .logo {
-  height: 100%;
-  width: 98px;
+  height: 38.5px;
+  width: 49px;
   margin: auto;
 }
 
@@ -316,7 +361,6 @@ html, body {
 .proposal .timeline .right-capsule .text-box {
   border-radius: 25px;
   box-sizing: border-box;
-  border: 1px solid;
   padding-left: 60px;
   margin-left: 50px;
 }
@@ -330,7 +374,6 @@ html, body {
 .proposal .timeline .left-capsule .text-box {
   border-radius: 25px;
   box-sizing: border-box;
-  border: 1px solid;
   padding-left: 10px;
   margin-right: 50px;
 }
