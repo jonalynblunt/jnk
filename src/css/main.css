@@ -48,7 +48,7 @@ a.anchor {
 /* header */
 #container #header {
   width: 100%;
-  height: 70px;
+  height: 90px;
   background: white;
   position: fixed;
   z-index: 9999;
@@ -58,17 +58,19 @@ a.anchor {
 #container #header #header-content {
   position: relative;
   width: 1000px;
-  height: 70px;
+  height: 100%;
   margin: auto;
 }
 
 #container #header #header-content #logo {
   position: fixed;
   left: 50%;
-  background: url("../img/scallop-logo.png") no-repeat;
-  height: 147px;
-  margin: 0 0 0 -144.5px;
-  width: 289px;
+  background-image: url("../img/scallop-logo.png");
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 229px;
+  margin-left: -114.5px;
+  background-size: 100%;
 }
 
 #container #header ul {
@@ -282,7 +284,8 @@ a.anchor {
 
 .about .logo-frame {
   height: 38.5px;
-  background: url("../img/proposal-bg.png") repeat-x;
+  background-image: url("../img/proposal-bg.png");
+  background-repeat: repeat-x;
   background-position-y: 50%;
   margin-bottom: 7px;
 }
@@ -294,22 +297,24 @@ a.anchor {
 }
 
 .about .left-capsule .logo {
-  background: url("../img/feathers-keshaun.png") no-repeat;
+  background: url("../img/feathers-keshaun.png");
+  background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .about .right-capsule .logo {
-  background: url("../img/feathers-jona.png") no-repeat;
+  background: url("../img/feathers-jona.png");
+  background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .about .jona-picture {
-  background: url("../img/jonalyn.jpg");
+  background-image: url("../img/jonalyn.jpg");
   background-size: 100% 100%;
 }
 
 .about .keshaun-picture {
-  background: url("../img/keshaun.jpg");
+  background-image: url("../img/keshaun.jpg");
   background-size: 100% 100%;
 }
 
@@ -323,7 +328,8 @@ a.anchor {
 .proposal .timeline {
   width: 100%;
   min-height: 300px;
-  background: url("../img/proposal-bg.png") repeat-y;
+  background-image: url("../img/proposal-bg.png");
+  background-repeat: repeat-y;
   background-position-x: 50%;
 }
 
@@ -462,7 +468,34 @@ a.anchor {
 .bridesmaids .title,
 .groomsmen .title {
   box-sizing: border-box;
-  padding: 25px 0;
+  padding: 0;
+}
+
+.bridesmaids .logo-frame,
+.groomsmen .logo-frame {
+  height: 38.5px;
+  width: 50%;
+  margin: auto;
+  background-image: url("../img/proposal-bg.png");
+  background-repeat: repeat-x;
+  background-position-y: 50%;
+  margin-bottom: 7px;
+}
+
+.bridesmaids .logo {
+  background-image: url("../img/feathers-jona.png");
+  background-size: 100%;
+  height: 38.5px;
+  width: 49px;
+  margin: auto;
+}
+
+.groomsmen .logo {
+  background-image: url("../img/feathers-keshaun.png");
+  background-size: 100%;
+  height: 38.5px;
+  width: 49px;
+  margin: auto;
 }
 
 .bridesmaids .title .name,
