@@ -20,6 +20,41 @@
     src: url("../fonts/proxima-nova.ttf") format('truetype');
 }
 
+/* tablets + phones */
+@media only screen and (max-width: 1000px) {
+  .panel {
+    width: 100%;
+  }
+
+  #header #header-content ul#nav1,
+  #header #header-content ul#nav2 {
+    display: none;
+  }
+
+  #header #header-content #navbar {
+    display: block;
+  }
+
+  #container #header #header-content {
+    width: 100%:
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 1000px) {
+  .panel {
+    width: 1000px;
+  }
+
+  #header #header-content #navbar {
+    display: none;
+  }
+
+  #container #header #header-content {
+    width: 1000px;
+  }
+}
+
 html, body {
   min-height: 100%;
   height: 100%;
@@ -68,7 +103,6 @@ a.anchor {
 
 #container #header #header-content {
   position: relative;
-  width: 1000px;
   height: 100%;
   margin: auto;
 }
@@ -93,6 +127,24 @@ a.anchor {
   bottom: 25px;
 }
 
+#container #header #header-content #navbar {
+  position: absolute;
+  right: 0;
+}
+
+#container #header #header-content #navbar ul {
+  display: none;
+  position: fixed;
+  top: 90px;
+  right: 0;
+  background: black;
+  color: white;
+}
+
+#container #header #header-content #navbar:hover ul {
+  display: block;
+}
+
 #container #header #header-content #nav1 {
   left: 0;
 }
@@ -111,9 +163,8 @@ a.anchor {
   cursor: pointer;
 }
 
-#container #header ul li:hover a {
-  text-decoration: underline;
-  color: #f06680;
+#container #header ul li:hover span {
+  border-bottom: 2px solid #f06680;
 }
 
 #container #content {
@@ -126,8 +177,8 @@ a.anchor {
 .landing-panel {
   height: 100%;
   color: white;
-  background: url("../img/landing.jpeg") no-repeat;
-  background-position-y: 90px;
+  background: url("../img/landing.jpg") no-repeat;
+  background-position: 0 90px;
   background-size: cover;
   box-sizing: border-box;
   padding-top: 90px;
@@ -137,15 +188,15 @@ a.anchor {
   position: absolute;
   top: 100px;
   right: 5%;
-  width: 350px;
+  width: 250px;
   border-radius: 25px;
   background: rgba(255,255,255,0.5);
   padding: 25px;
   color: black;
+  text-align: center;
 }
 
 .panel {
-  width: 1000px;
   margin: 40px auto;
   box-sizing: border-box;
   margin-bottom: 75px;
@@ -259,6 +310,10 @@ a.anchor {
   box-sizing: border-box;
 }
 
+.carousel .links ul li.selected {
+  background: #f06680;
+}
+
 /* panel-specific */
 /* about */
 .about {
@@ -281,7 +336,7 @@ a.anchor {
   width: 50%;
   float: left;
   box-sizing: border-box;
-  padding: 50px;
+  padding: 20px;
 }
 
 .about .left-capsule .text-box,
@@ -311,8 +366,9 @@ a.anchor {
   height: 38.5px;
   background-image: url("../img/proposal-bg.png");
   background-repeat: repeat-x;
-  background-position-y: 50%;
-  margin-bottom: 7px;
+  background-position: 0 50%;
+  margin: 0 auto 7px auto;
+  width: 50%;
 }
 
 .about .logo {
@@ -355,7 +411,7 @@ a.anchor {
   min-height: 300px;
   background-image: url("../img/proposal-bg.png");
   background-repeat: repeat-y;
-  background-position-x: 50%;
+  background-position: 50%;
 }
 
 .proposal .timeline .left-capsule,
@@ -373,6 +429,7 @@ a.anchor {
 
 .proposal .timeline .center-capsule .text {
   text-align: center;
+  font-family: "Vevey";
 }
 
 .proposal .timeline .center-capsule .image {
@@ -384,14 +441,13 @@ a.anchor {
 
 .proposal .timeline .left-capsule {
   background: url("../img/proposal-textbg-left.png") no-repeat;
-  background-position-y: 50%;
-  background-position-x: 100%;
+  background-position: 100% 50%;
   margin-right: 50%;
 }
 
 .proposal .timeline .right-capsule {
   background: url("../img/proposal-textbg-right.png") no-repeat;
-  background-position-y: 50%;
+  background-position: 0 50%;
   margin-left: 50%;
 }
 
@@ -401,29 +457,40 @@ a.anchor {
   background-size: 38.5px;
 }
 
-.proposal .timeline .right-capsule .text-box {
+.proposal .timeline .right-capsule .text-box,
+.proposal .timeline .left-capsule .text-box {
   border-radius: 25px;
   box-sizing: border-box;
   padding: 20px 20px 20px 60px;
+}
+
+.proposal .timeline .right-capsule .text-box {
   margin-left: 50px;
 }
 
 .proposal .timeline .left-capsule .text-box {
-  background: url("../img/feathers-keshaun.png") no-repeat;
-  background-position: 98% 5px;
-  background-size: 38.5px;
+  margin-right: 50px;
 }
 
 .proposal .timeline .left-capsule .text-box {
-  border-radius: 25px;
-  box-sizing: border-box;
-  padding: 20px 60px 20px 20px;
-  margin-right: 50px;
+  background: url("../img/feathers-keshaun.png") no-repeat;
+  background-position: 2% 5px;
+  background-size: 38.5px;
 }
+
 
 /* photos */
 .photos .carousel li {
   box-sizing: border-box;
+}
+
+.photos .carousel {
+  height: 575px;
+}
+
+.photos .carousel .credit {
+  bottom: 50px;
+  text-align: center;
 }
 
 .photos .image-frame {
@@ -466,6 +533,53 @@ a.anchor {
 .details .capsule .text-box {
   padding: 65px 20px 20px 20px;
   text-align: center
+}
+
+.details .capsule .text-box.where-box {
+  padding: 300px 20px 20px 20px;
+  background-image: url("../img/rixey.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.where-box .where-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Asterism";
+  font-size: 50px;
+}
+
+.where-box .where-subtitle {
+  margin: 0;
+  padding: 0;
+  font-family: "Vevey";
+}
+
+.where-box .rixey-link {
+  text-align: right;
+}
+
+.details .capsule .how-box h3 {
+  font-family: "Vevey";
+  font-size: 30px;
+  margin: 0;
+}
+
+.details .capsule .how-box .divider {
+  height: 38.5px;
+  width: 50%;
+  margin: 15px auto;
+  background-image: url("../img/proposal-bg.png");
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+}
+
+.details .capsule .how-box .divider .feather {
+  background-image: url("../img/black-feather.png");
+  background-size: 100%;
+  height: 38.5px;
+  width: 49px;
+  margin: auto;
 }
 
 /* bridesmaids + groomsmen */
