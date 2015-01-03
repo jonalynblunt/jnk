@@ -446,6 +446,10 @@ a.anchor {
   position: relative;
 }
 
+.details .subtitle a {
+  color: #f06680;
+}
+
 .details .capsule .label {
   width: 100%;
   position: absolute;
