@@ -29,9 +29,20 @@ html, body {
 }
 
 a {
+  color: #4AC0FF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+ 
+
+a.nav, a.nav:hover {
   text-decoration: none;
   color: black;
 }
+
 
 a.anchor {
   display: block;
@@ -100,8 +111,9 @@ a.anchor {
   cursor: pointer;
 }
 
-#container #header ul li:hover {
+#container #header ul li:hover a {
   text-decoration: underline;
+  color: #f06680;
 }
 
 #container #content {
@@ -115,10 +127,10 @@ a.anchor {
   height: 100%;
   color: white;
   background: url("../img/landing.jpeg") no-repeat;
-  background-position-y: 70px;
+  background-position-y: 90px;
   background-size: cover;
   box-sizing: border-box;
-  padding-top: 70px;
+  padding-top: 90px;
 }
 
 .landing-panel .landing-text {
@@ -249,11 +261,19 @@ a.anchor {
 
 /* panel-specific */
 /* about */
+.about {
+  overflow: auto;
+}
+
 .about ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  min-height: 300px;
+  height: 100%;
+}
+
+.about ul li {
+  height: 100%;
 }
 
 .about .left-capsule,
@@ -262,6 +282,11 @@ a.anchor {
   float: left;
   box-sizing: border-box;
   padding: 50px;
+}
+
+.about .left-capsule .text-box,
+.about .right-capsule .text-box {
+  padding: 20px
 }
 
 .about .picture {
@@ -379,7 +404,7 @@ a.anchor {
 .proposal .timeline .right-capsule .text-box {
   border-radius: 25px;
   box-sizing: border-box;
-  padding-left: 60px;
+  padding: 20px 20px 20px 60px;
   margin-left: 50px;
 }
 
@@ -392,7 +417,7 @@ a.anchor {
 .proposal .timeline .left-capsule .text-box {
   border-radius: 25px;
   box-sizing: border-box;
-  padding-left: 10px;
+  padding: 20px 60px 20px 20px;
   margin-right: 50px;
 }
 
@@ -414,7 +439,7 @@ a.anchor {
 
 /* details */
 .details .capsule {
-  width: 500px;
+  width: 70%;
   margin: auto;
   box-sizing: border-box;
   padding: 10px;
@@ -422,16 +447,21 @@ a.anchor {
 }
 
 .details .capsule .label {
-  width: 70px;
+  width: 100%;
   position: absolute;
   right: 0;
-  top: 15px;
+  top: 25px;
   background: #f06680;
   color: white;
   text-align: center;
-  font-size: 16px;
+  font-size: 25px;
   text-transform: uppercase;
   box-shadow: 1px 1px 3px grey;
+}
+
+.details .capsule .text-box {
+  padding: 65px 20px 20px 20px;
+  text-align: center
 }
 
 /* bridesmaids + groomsmen */
@@ -520,4 +550,43 @@ a.anchor {
 
 .groomsman1 {
   background: url("../img/groomsman1.jpg") no-repeat;
+}
+
+.groomsman2 {
+  background: url("../img/groomsman2.jpg") no-repeat;
+}
+
+.groomsman3 {
+  background: url("../img/groomsman3.jpg") no-repeat;
+}
+
+.groomsman4 {
+  background: url("../img/groomsman4.jpg") no-repeat;
+}
+
+.bridesmaid1 {
+  background: url("../img/bridesmaid1.jpg") no-repeat;
+}
+
+.bridesmaid2 {
+  background: url("../img/bridesmaid2.jpg") no-repeat;
+}
+
+.bridesmaid3 {
+  background: url("../img/bridesmaid3.jpg") no-repeat;
+}
+
+.bridesmaid4 {
+  background: url("../img/bridesmaid4.jpg") no-repeat;
+}
+
+.registry .text-box {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+}
+
+.registry .text-box .cursive {
+  font-family: "Asterism";
+  font-size: 30px;
 }
