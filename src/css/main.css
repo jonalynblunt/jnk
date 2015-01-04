@@ -583,6 +583,13 @@ a.anchor {
   margin: 0;
 }
 
+.details .capsule .how-box .header {
+  font-family: "Vevey";
+  font-size: 30px;
+  margin: auto;
+  clear: both;
+}
+
 .details .capsule .how-box .divider {
   height: 38.5px;
   width: 50%;
@@ -600,20 +607,24 @@ a.anchor {
   margin: auto;
 }
 
-.details .google-maps {
+.details .map {
   position: relative;
-  padding-bottom: 75%; // This is the aspect ratio
-  height: 0;
   overflow: hidden;
   margin: 15px 0;
 }
 
-.details .google-maps iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
+.details .half-map1 {
+  float: left;
+  width: 45%;
+}
+
+.details .half-map2 {
+  float: right;
+  width: 45%;
+}
+
+.details .map img {
+  width: 100%; 
 }
 
 /* bridesmaids + groomsmen */
