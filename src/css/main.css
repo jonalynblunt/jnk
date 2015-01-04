@@ -21,7 +21,31 @@
 }
 
 /* tablets + phones */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 250px) {
+  html, body {
+    font-size: 14px;
+  }
+
+  #container .landing-panel .landing-text {
+    width: 80%;
+  }
+
+  .bridesmaids .title .name,
+  .groomsmen .title .name {
+    font-size: 25px;
+  }
+
+  .bridesmaids .title .part,
+  .groomsmen .title .part {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 1000px) {
+  html, body {
+    font-size: 14px;
+  }
+
   .panel {
     width: 100%;
   }
@@ -31,12 +55,18 @@
     display: none;
   }
 
-  #header #header-content #navbar {
-    display: block;
-  }
-
   #container #header #header-content {
     width: 100%:
+  }
+
+  .bridesmaids .title .name,
+  .groomsmen .title .name {
+    font-size: 25px;
+  }
+
+  .bridesmaids .title .part,
+  .groomsmen .title .part {
+    font-size: 16px;
   }
 }
 
@@ -46,12 +76,18 @@
     width: 1000px;
   }
 
-  #header #header-content #navbar {
-    display: none;
-  }
-
   #container #header #header-content {
     width: 1000px;
+  }
+
+  .bridesmaids .title .name,
+  .groomsmen .title .name {
+    font-size: 30px;
+  }
+
+  .bridesmaids .title .part,
+  .groomsmen .title .part {
+    font-size: 20px;
   }
 }
 
@@ -125,24 +161,6 @@ a.anchor {
   position: absolute;
   height: 20px;
   bottom: 25px;
-}
-
-#container #header #header-content #navbar {
-  position: absolute;
-  right: 0;
-}
-
-#container #header #header-content #navbar ul {
-  display: none;
-  position: fixed;
-  top: 90px;
-  right: 0;
-  background: black;
-  color: white;
-}
-
-#container #header #header-content #navbar:hover ul {
-  display: block;
 }
 
 #container #header #header-content #nav1 {
@@ -626,7 +644,7 @@ a.anchor {
   margin: auto;
   background-image: url("../img/proposal-bg.png");
   background-repeat: repeat-x;
-  background-position-y: 50%;
+  background-position: 0 50%;
   margin-bottom: 7px;
 }
 
@@ -649,14 +667,12 @@ a.anchor {
 .bridesmaids .title .name,
 .groomsmen .title .name {
   font-family: "Vevey";
-  font-size: 30px;
   margin: 0;
   line-height: 1;
 }
 
 .bridesmaids .title .part,
 .groomsmen .title .part {
-  font-size: 20px;
   margin: 0;
 }
 
