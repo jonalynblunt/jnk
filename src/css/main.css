@@ -100,8 +100,9 @@ html, body {
 }
 
 a {
-  color: #4AC0FF;
+  color: #f06680;
   text-decoration: none;
+  font-style: italic;
 }
 
 a:hover {
@@ -112,6 +113,7 @@ a:hover {
 a.nav, a.nav:hover {
   text-decoration: none;
   color: black;
+  font-style: normal;
 }
 
 
@@ -212,6 +214,7 @@ a.anchor {
   padding: 25px;
   color: black;
   text-align: center;
+  font-style: italic;
 }
 
 .panel {
@@ -355,6 +358,7 @@ a.anchor {
   float: left;
   box-sizing: border-box;
   padding: 20px;
+  font-style: italic;
 }
 
 .about .left-capsule .text-box,
@@ -391,7 +395,7 @@ a.anchor {
 
 .about .logo {
   height: 38.5px;
-  width: 49px;
+  width: 56.5px;
   margin: auto;
 }
 
@@ -432,6 +436,15 @@ a.anchor {
   background-position: 50%;
 }
 
+.proposal .subtitle h3 {
+  font-weight: normal;
+}
+
+.proposal .timeline .left-capsule,
+.proposal .timeline .right-capsule {
+  font-style: italic;
+}
+
 .proposal .timeline .left-capsule,
 .proposal .timeline .right-capsule,
 .proposal .timeline .center-capsule {
@@ -443,14 +456,12 @@ a.anchor {
   width: 50%;
   margin: auto;
   background: white;
+  font-size: 50px;
 }
 
 .proposal .timeline .center-capsule .text {
   text-align: center;
   font-family: "Vevey";
-}
-
-.proposal .timeline .center-capsule .image {
 }
 
 .proposal .timeline .center-capsule .image img {
@@ -571,6 +582,8 @@ a.anchor {
   margin: 0;
   padding: 0;
   font-family: "Vevey";
+  font-size: 25px;
+  letter-spacing: 1.5;
 }
 
 .where-box .rixey-link {
@@ -603,14 +616,19 @@ a.anchor {
   background-image: url("../img/black-feather.png");
   background-size: 100%;
   height: 38.5px;
-  width: 49px;
+  width: 56.5px;
   margin: auto;
 }
 
 .details .map {
   position: relative;
   overflow: hidden;
-  margin: 15px 0;
+  padding: 15px 0;
+}
+
+.details .map1 {
+  width: 60%;
+  margin: auto;
 }
 
 .details .half-map1 {
@@ -667,7 +685,7 @@ a.anchor {
 .bridesmaids .logo-frame,
 .groomsmen .logo-frame {
   height: 38.5px;
-  width: 50%;
+  width: 35%;
   margin: auto;
   background-image: url("../img/proposal-bg.png");
   background-repeat: repeat-x;
@@ -678,16 +696,18 @@ a.anchor {
 .bridesmaids .logo {
   background-image: url("../img/feathers-jona.png");
   background-size: 100%;
+  background-repeat: no-repeat;
   height: 38.5px;
-  width: 49px;
+  width: 56.5px;
   margin: auto;
 }
 
 .groomsmen .logo {
   background-image: url("../img/feathers-keshaun.png");
   background-size: 100%;
+  background-repeat: no-repeat;
   height: 38.5px;
-  width: 49px;
+  width: 56.5px;
   margin: auto;
 }
 
@@ -701,6 +721,13 @@ a.anchor {
 .bridesmaids .title .part,
 .groomsmen .title .part {
   margin: 0;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.bridesmaids .text,
+.groomsmen .text {
+  font-style: italic;
 }
 
 .bridesmaids .bridesmaid-image,
@@ -750,4 +777,8 @@ a.anchor {
 .registry .text-box .cursive {
   font-family: "Asterism";
   font-size: 30px;
+}
+
+.registry .text-box .cursive.header {
+  font-size: 45px;
 }
