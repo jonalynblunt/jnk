@@ -456,7 +456,7 @@ a.anchor {
   width: 50%;
   margin: auto;
   background: white;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .proposal .timeline .center-capsule .text {
@@ -565,7 +565,7 @@ a.anchor {
 }
 
 .details .capsule .text-box.where-box {
-  padding: 300px 20px 20px 20px;
+  padding: 280px 20px 20px 20px;
   background-image: url("../img/rixey.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -624,6 +624,10 @@ a.anchor {
   position: relative;
   overflow: hidden;
   padding: 15px 0;
+}
+
+.details .map .map-label {
+  margin-bottom: 5px;
 }
 
 .details .map1 {
@@ -720,9 +724,10 @@ a.anchor {
 
 .bridesmaids .title .part,
 .groomsmen .title .part {
-  margin: 0;
+  margin: 0 0 10px 0;
   font-weight: normal;
   font-style: italic;
+  border-bottom: 1px solid black;
 }
 
 .bridesmaids .text,
