@@ -21,9 +21,18 @@
 }
 
 /* tablets + phones */
-@media only screen and (max-width: 250px) {
+@media only screen and (max-width: 300px) {
   html, body {
     font-size: 14px;
+  }
+
+  .landing-panel {
+    max-height: 100%;  
+    min-height: 450px;
+  }
+
+  div.photos.panel {
+    margin-bottom: 120px;
   }
 
   #container .landing-panel .landing-text {
@@ -41,9 +50,17 @@
   }
 }
 
-@media only screen and (min-width: 250px) and (max-width: 1000px) {
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
   html, body {
     font-size: 14px;
+  }
+
+  div.photos.panel {
+    margin-bottom: 120px;
+  }
+
+  .landing-panel {
+    height: 100%;
   }
 
   .panel {
@@ -72,6 +89,10 @@
 
 /* desktop */
 @media only screen and (min-width: 1000px) {
+  .landing-panel {
+    height: 100%;
+  }
+
   .panel {
     width: 1000px;
   }
@@ -103,6 +124,7 @@ a {
   color: #f06680;
   text-decoration: none;
   font-style: italic;
+  word-break: break-all;
 }
 
 a:hover {
@@ -195,7 +217,6 @@ a.anchor {
 
 /* classes n stuff */
 .landing-panel {
-  height: 100%;
   color: white;
   background: url("../img/landing.jpg") no-repeat;
   background-position: 0 90px;
@@ -282,7 +303,7 @@ a.anchor {
 .carousel .prev-frame {
   position: relative;
   float: left;
-  height: 500px;
+  height: 100%;
   width: 10%;
 }
 
@@ -304,13 +325,13 @@ a.anchor {
 }
 
 .carousel .links {
-  position: absolute;
-  bottom: 0;
+  clear: both;
   height: 50px;
   width: 100%;
 }
 
 .carousel .links ul {
+  width: initial;
   list-style-type: none;
   height: 50px;
   margin: 0 auto 0 auto;
@@ -422,10 +443,24 @@ a.anchor {
 }
 
 /* proposal */
+.proposal .video-frame {
+  width: 75%;
+  margin: 0 auto 10px auto;
+}
+
 .proposal .video {
-  width: 420px;
-  height: 315px;
-  margin: 20px auto;
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+}
+
+.proposal .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .proposal .timeline {
@@ -490,7 +525,7 @@ a.anchor {
 .proposal .timeline .left-capsule .text-box {
   border-radius: 25px;
   box-sizing: border-box;
-  padding: 20px 20px 20px 60px;
+  padding: 20px 20px 20px 40px;
 }
 
 .proposal .timeline .right-capsule .text-box {
@@ -518,7 +553,7 @@ a.anchor {
 }
 
 .photos .carousel .credit {
-  bottom: 50px;
+  clear: both;
   text-align: center;
 }
 

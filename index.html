@@ -78,8 +78,10 @@
 
             <div class="panel proposal">
               <a class="anchor" name="proposal"></a>
-              <div class="video">
-                <iframe width="420" height="315" src="http://www.youtube.com/embed/TIDtwF47TlQ" frameborder="0" allowfullscreen></iframe>
+              <div class="video-frame">
+                <div class="video">
+                  <iframe width="420" height="315" src="http://www.youtube.com/embed/TIDtwF47TlQ" frameborder="0" allowfullscreen></iframe>
+                </div>
               </div>
               <div class="title"> <h1>The Proposal - August 3, 2013</h1></div>
               <div class="subtitle"><h3><i>We had decided in July to have our housewarming party in August</i></h3></div>
@@ -96,7 +98,9 @@
                 </div>
                 <div class="left-capsule">
                   <div class="text-box">
+                    <p>
                       I awoke to put together the mammoth of a grill we had just purchased from Home Depot. I was nervous about many things but proposing wasn't one of them. I mean yes I was going to be proposing, but that decision was somehow the most clear decision for me to make that day. My mind was on filling the time with ensuring everything was prepared for the housewarming. In hindsight, I was probably a little nervous about the proposal, but I had to fill my time with busywork, and there was plenty of it.
+                    </p>
                   </div>
                 </div>
                 <div class="center-capsule">
@@ -113,7 +117,9 @@
                 </div>
                 <div class="left-capsule">
                   <div class="text-box">
+                    <p>
                     After the guests arrived, I then realized the weight of the situation. Nobody but I knew what was going down. I was so nervous I could hardly grill the food. As the party progressed, I recall telling my oldest brother and a few others what was going to happen. 
+                    </p>
                   </div>
                 </div>
                 <div class="center-capsule">
@@ -135,7 +141,9 @@
                 </div>
                 <div class="left-capsule">
                   <div class="text-box">
+                    <p>
                     As we gave a toast for all that had come to our housewarming, I mentioned that I had one more thing to address. I got down on one knee and asked the question "Jonalyn, will you marry me?" It took some time for her to realize what was happening, but she eventually said yes. It was a great feeling to have everyone around for the event.
+                    </p>
                   </div>
                 </div>
                 <div class="center-capsule">
@@ -618,7 +626,7 @@
               });
 
               var link_width = link_list.find("li").outerWidth();
-              link_list.width(num_children * link_width);
+              link_list.css("max-width", "" + (num_children * link_width) + "px");
 
               link_list.find("li").click(function(){
                   slide_list.data({ current_slide: Number($(this).text()) - 1 });
@@ -639,6 +647,14 @@
                 if (slide_list.data("current_slide") > 0) {
                   slide_list.data({current_slide: slide_list.data("current_slide") - 1});
                   update_slide(slide_list, link_list);
+                }
+              });
+
+              //center the gallery frame
+              $(window).resize(function(){
+                if ($(window).width() < 1000) {
+                 $(".photos .carousel").height($(".image-frame").height()+80);
+                 $(".photos .carousel-frame").height($(".image-frame").height()+80);
                 }
               });
             });
