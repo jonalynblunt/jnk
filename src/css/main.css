@@ -20,9 +20,9 @@
     src: url("../fonts/proxima-nova.ttf") format('truetype');
 }
 
-  .landing-panel {
-    height: 100%;
-  }
+@media only screen and (max-device-width : 680px) {
+  font-size: 14px;
+}
 
 .panel {
   width: 1000px;
@@ -147,6 +147,8 @@ a.anchor {
 
 /* classes n stuff */
 .landing-panel {
+  height: 100%;
+  min-width: 1000px;
   color: white;
   background: url("../img/landing.jpg") no-repeat;
   background-position: 0 90px;
