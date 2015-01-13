@@ -20,96 +20,26 @@
     src: url("../fonts/proxima-nova.ttf") format('truetype');
 }
 
-/* tablets + phones */
-@media only screen and (max-width: 300px) {
-  html, body {
-    font-size: 14px;
-  }
-
-  .landing-panel {
-    max-height: 100%;  
-    min-height: 450px;
-  }
-
-  div.photos.panel {
-    margin-bottom: 120px;
-  }
-
-  #container .landing-panel .landing-text {
-    width: 80%;
-  }
-
-  .bridesmaids .title .name,
-  .groomsmen .title .name {
-    font-size: 25px;
-  }
-
-  .bridesmaids .title .part,
-  .groomsmen .title .part {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (min-width: 300px) and (max-width: 1000px) {
-  html, body {
-    font-size: 14px;
-  }
-
-  div.photos.panel {
-    margin-bottom: 120px;
-  }
-
   .landing-panel {
     height: 100%;
   }
 
-  .panel {
-    width: 100%;
-  }
-
-  #header #header-content ul#nav1,
-  #header #header-content ul#nav2 {
-    display: none;
-  }
-
-  #container #header #header-content {
-    width: 100%:
-  }
-
-  .bridesmaids .title .name,
-  .groomsmen .title .name {
-    font-size: 25px;
-  }
-
-  .bridesmaids .title .part,
-  .groomsmen .title .part {
-    font-size: 16px;
-  }
+.panel {
+  width: 1000px;
 }
 
-/* desktop */
-@media only screen and (min-width: 1000px) {
-  .landing-panel {
-    height: 100%;
-  }
+#container #header #header-content {
+  width: 1000px;
+}
 
-  .panel {
-    width: 1000px;
-  }
+.bridesmaids .title .name,
+.groomsmen .title .name {
+  font-size: 30px;
+}
 
-  #container #header #header-content {
-    width: 1000px;
-  }
-
-  .bridesmaids .title .name,
-  .groomsmen .title .name {
-    font-size: 30px;
-  }
-
-  .bridesmaids .title .part,
-  .groomsmen .title .part {
-    font-size: 20px;
-  }
+.bridesmaids .title .part,
+.groomsmen .title .part {
+  font-size: 20px;
 }
 
 html, body {
@@ -589,7 +519,8 @@ a.anchor {
   background: #f06680;
   color: white;
   text-align: center;
-  font-size: 25px;
+  font-size: 32px;
+  font-family: "Vevey";
   text-transform: uppercase;
   box-shadow: 1px 1px 3px grey;
 }
@@ -812,6 +743,10 @@ a.anchor {
   width: 50%;
   margin: auto;
   padding: 20px;
+}
+
+.registry img {
+  width: 100%;
 }
 
 .registry .text-box .cursive {
